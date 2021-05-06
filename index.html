@@ -1,22 +1,23 @@
+<html>
 <head>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <title>Random Number Generator</title>
 <style>
 body {
-	background-color: #2B2B2B;
-	color: #FFFFFF;
+    background-color: #2B2B2B;
+    color: #FFFFFF;
 }
 .generate {
     border: none;
     outline: none;
     overflow: none;
-  background-color: transparent;
+    background-color: transparent;
     cursor: pointer;
 }
   
 .number {
-  font-size: 8.5em;
+        font-size: 8.5em;
 	color: #FFFFFF;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
@@ -24,6 +25,7 @@ body {
 }
 </style>
 </head>
+<body>
 
 <center>
 	<img src="https://i.postimg.cc/fT3rVp4f/cmfdevlogowide.png" width="30%">
@@ -41,31 +43,20 @@ body {
 	<br>
 <button class="generate number"></button>
 </center>
+	</body>
 <script>
-/**
- * This object generates a random number
- */
 var generator = {
   min: 0,
   max: 10,
   
-  /**
-   * Generate a random number
-   */
   getRandom: function () {
     return Math.round(Math.random() * (this.max - this.min) + this.min);
   },
   
-  /**
-   * Set the lower number boundry
-   */
   setMin: function (newMin) {
     this.min = parseInt(newMin);
   },
-  
-  /**
-   * Set the higher number boundry
-   */
+
   setMax: function (newMax) {
     this.max = parseInt(newMax);
   }
@@ -86,4 +77,5 @@ options.querySelector('#min').onchange = function () {
 options.querySelector('#max').onchange = function () {
 	generator.setMax(this.value);
 };
-</style>
+</script>
+	</html>
